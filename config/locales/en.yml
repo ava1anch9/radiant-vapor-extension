@@ -1,0 +1,22 @@
+---
+en:
+  vapor:
+    buttons:
+      create: "Create"
+    errors:
+      must_be_admin: "You must be an administrator to manage Redirects."
+    hints:
+      this_redirect: "this redirect."
+      visitors_of_this_page: "Visitors to this page will redirected to {{redirect}}."
+      you_may: "You may"
+    labels:
+      action: "Action"
+      catch_url: "Catch URL"
+      redirect_url: "Redirect URL"
+      status: "Status"
+    links:
+      delete: "Delete"
+      manage_flow: "Manage your traffic flow..."
+      remove: "remove"
+    redirects_to: "Redirects to"
+    redirect_destroyed: "Redirect successfully destroyed"

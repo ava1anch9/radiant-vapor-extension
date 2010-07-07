@@ -4,13 +4,7 @@ class VaporExtension < Radiant::Extension
   version "#{File.read(File.expand_path(File.dirname(__FILE__)) + '/VERSION')}"
   description "Manage redirects without creating useless pages"
   url "http://saturnflyer.com/"
-  
-  define_routes do |map|
-    map.namespace :admin do |admin|
-      admin.resources 'flow_meters', :only => [:index, :create, :destroy]
-    end
-  end
-  
+    
   def activate
     unless respond_to?(:tab)
       admin.tabs.add "Redirects", "/admin/flow_meters", :after => "Layouts", :visibility => [:admin]
@@ -19,6 +13,9 @@ class VaporExtension < Radiant::Extension
         add_item 'Redirects', '/admin/flow_meters'
       end
     end
+
+
+    
     FlowMeter.initialize_all if ActiveRecord::Base.connection.tables.include?('flow_meters')
     
     Page.class_eval { include PageVapor }

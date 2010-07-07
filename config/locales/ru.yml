@@ -1,0 +1,22 @@
+---
+ru:
+  vapor:
+    buttons:
+      create: "Создать"
+    errors:
+      must_be_admin: "Вы должны быть администратором, чтобы управлять перенаправлениями."
+    hints:
+      this_redirect: "это перенаправление."
+      visitors_of_this_page: "Посетители этой страницы будут перенаправлены на {{redirect}}."
+      you_may: "Вы можете"
+    labels:
+      action: "Действие"
+      catch_url: "Исходный URL"
+      redirect_url: "Конечный URL"
+      status: "Статус"
+    links:
+      delete: "Удалить"
+      manage_flow: "Управление перенаправлениями"
+      remove: "удалить"
+    redirects_to: "Перенаправлен на"
+    redirect_destroyed: "Перенаправление успешно удалено"

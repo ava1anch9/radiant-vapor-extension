@@ -2,7 +2,7 @@ class Admin::FlowMetersController < ApplicationController
   only_allow_access_to :index, :create, :destroy,
     :when => :admin,
     :denied_url => { :controller => 'pages', :action => 'index' },
-    :denied_message => 'You must be an administrator to manage Redirects.'
+    :denied_message => t('vapor.errors.must_be_admin')
   
   def index
     @flow_meter = FlowMeter.new
@@ -23,6 +23,7 @@ class Admin::FlowMetersController < ApplicationController
   def destroy
     @flow_meter = FlowMeter.find(params[:id])
     @flow_meter.destroy
+    flash[:notice] = t('vapor.redirect_destroyed')
     redirect_to admin_flow_meters_url
   end
 end
